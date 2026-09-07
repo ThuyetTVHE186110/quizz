@@ -1,8 +1,8 @@
-# Hackathon Framework Integration Implementation Plan
+# Hackathon Framework Integration Implementation Plan (Superseded)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Import the reusable FPT hackathon framework into `quizz` and publish it as a new public GitHub repository.
+**Goal:** Historical framework-only plan. The approved implementation task list is now `specs/001-quiz-mvp/tasks.md`.
 
 **Architecture:** Preserve the framework's discovery paths under `.github/` and `spec/`. Keep the event README as `HACKATHON-GUIDE.md`, while a concise root README identifies the new project and points readers to the imported references.
 
