@@ -18,6 +18,7 @@ type QuestionResult = {
 type QuizResult = {
   score: number
   total: number
+  percentage: number
   results: QuestionResult[]
 }
 
@@ -114,7 +115,7 @@ function App() {
   }
 
   if (status === 'done' && result) {
-    const percent = Math.round((result.score / result.total) * 100)
+    const percent = result.percentage
     return (
       <main className="quiz-shell">
         <div className="quiz-card">

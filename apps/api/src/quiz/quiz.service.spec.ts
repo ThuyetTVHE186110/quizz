@@ -58,6 +58,24 @@ describe('QuizService', () => {
     expect(result.results[0].correct).toBe(false);
   });
 
+  it('REQ-QUIZ-008: submit rounds the percentage score to the nearest integer', async () => {
+    prisma.question.findMany.mockResolvedValue([questionRow]);
+
+    const result = await service.submit({
+      answers: [{ questionId: 1, selectedIndex: 1 }],
+    });
+
+    expect(result.percentage).toBe(100);
+  });
+
+  it('REQ-QUIZ-008: percentage is 0 when there are no answers, with no division by zero', async () => {
+    prisma.question.findMany.mockResolvedValue([]);
+
+    const result = await service.submit({ answers: [] });
+
+    expect(result.percentage).toBe(0);
+  });
+
   it('submit handles an unknown question id gracefully', async () => {
     prisma.question.findMany.mockResolvedValue([]);
 

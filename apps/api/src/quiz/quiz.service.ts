@@ -52,7 +52,8 @@ export class QuizService {
     });
 
     const score = results.filter((r) => r.correct).length;
+    const percentage = results.length > 0 ? Math.round((score / results.length) * 100) : 0;
 
-    return { score, total: results.length, results };
+    return { score, total: results.length, percentage, results };
   }
 }
