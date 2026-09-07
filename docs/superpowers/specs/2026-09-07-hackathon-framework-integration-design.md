@@ -1,8 +1,8 @@
-# Hackathon Framework Integration Design
+# Hackathon Framework Integration Design (Superseded)
 
 ## Goal
 
-Turn the empty `quizz` directory into an independent public GitHub repository that contains the reusable FPT hackathon workflow framework without carrying over the source repository's Git history.
+This initial framework-only scope was superseded by the approved Quizizz MVP specification at `specs/001-quiz-mvp/spec.md`. The framework remains part of that larger delivery.
 
 ## Scope
 
@@ -15,7 +15,7 @@ The repository will include:
 - The hackathon instructions renamed to `HACKATHON-GUIDE.md`.
 - A project-specific `README.md` that identifies the repository and links to the imported guidance.
 
-Quiz application code and resolution of the four activity-log ambiguities are outside this integration task.
+Quiz application code and the four activity-log decisions are defined by the canonical Spec Kit artifacts under `specs/001-quiz-mvp/`.
 
 ## Structure
 
